@@ -99,3 +99,5 @@ ENV/
 .env/init_env.py
 .flaskenv
 .vscode/
+uwsgi.ini
+uwsgi.pid

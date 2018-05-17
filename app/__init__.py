@@ -12,7 +12,7 @@ mongo = NXMongo()
 def create_app():
     app = Flask(__name__)
     config_name = os.getenv('FLASK_ENV') if os.getenv('FLASK_ENV') else 'default'
-
+    print('config_name:**********', config_name)
     config_obj = config.get(config_name)
     app.config.from_object(config_obj)
     config_obj.init_app(app)
@@ -29,5 +29,3 @@ def create_app():
 
     return app
 
-if __name__ == 'main':
-    app = create_app()
