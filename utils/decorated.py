@@ -22,7 +22,6 @@ def check_request_args(**params):
             if request.method == 'POST' and 'post' in params:
                 check_args = params.get('post')
                 data = load_params(request)
-                print(data)
                 if (set(data.keys()) & set(check_args)) != set(check_args):
                     return set_result(1, '缺少参数')
             return func(*args, **kwargs)

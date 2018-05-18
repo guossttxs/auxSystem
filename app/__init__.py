@@ -28,4 +28,3 @@ def create_app():
         CORS(app)
 
     return app
-
